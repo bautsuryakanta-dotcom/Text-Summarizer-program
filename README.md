@@ -1,63 +1,39 @@
+AI AND ML
+OBJECTIVE: TEXT SUMMARIZER USING HUGGING FACE
 
-## Overview
+Build a Text Summarization program using a pre-trained model from Hugging Face. The program should take a long paragraph as input and generate a short summary.
 
----
+TOOLS REQUIRED:
 
-This project is a Text Summarization tool built using Hugging Face Transformers. It takes long text input and generates a concise summary using a pre-trained model.
+● Python
+● Hugging Face Transformers
+● Google Colab / Jupyter Notebook
 
----
+TASK:
 
-## Features
+Install the required libraries.
+Use the Hugging Face summarization pipeline.
+Input a long paragraph or article.
+Generate and display the summary.
+BASIC IMPLEMENTATION:
 
----
+● pip install transformers torch
 
-* Uses `facebook/bart-large-cnn` model
-* Custom tokenizer and model loading
-* Handles long text (up to 1024 tokens)
-* Interactive input system
-* Displays word reduction
+● from transformers import pipeline
 
----
+● summarizer = pipeline("summarization")
 
-## Tech Stack
+● text = """ Artificial Intelligence is transforming many industries by allowing machines to perform tasks that normally require human intelligence. It is widely used in healthcare, finance, robotics, and automation. """
 
----
+● summary = summarizer(text, max_length=50, min_length=20, do_sample=False)
 
-* Python
-* Hugging Face Transformers
-* PyTorch
+● print(summary[0]['summary_text'])
 
----
+EXPECTED OUTPUT:
 
-## Installation
+The program should produce a short and meaningful summary of the given text.
 
----
+SUBMISSION:
 
-```bash
-pip install transformers torch accelerate
-```
-
----
-
-## Usage
-
----
-
-```python
-summarizer = initialize_summarizer()
-print(summarize_text(summarizer, "Your long text here"))
-```
-
----
-
-## Example
-
----
-
-Input: Long paragraph
-Output: Short meaningful summary
-
----
-
-## Author
-Suryakanta Baut
+● Source code or notebook.
+● One example input and output summary.
