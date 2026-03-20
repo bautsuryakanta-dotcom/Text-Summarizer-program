@@ -1,4 +1,5 @@
 AI AND ML
+
 OBJECTIVE: TEXT SUMMARIZER USING HUGGING FACE
 
 Build a Text Summarization program using a pre-trained model from Hugging Face. The program should take a long paragraph as input and generate a short summary.
